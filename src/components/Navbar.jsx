@@ -31,7 +31,11 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="container mx-auto hidden md:flex justify-between items-center py-6">
+            <motion.div
+            initial={{opacity: 0, y:-100}}
+            animate={{opacity: 1, y:0}}
+            transition={{duration: 0.5}}
+            className="container mx-auto hidden md:flex justify-between items-center py-6">
                 <div className="text-xl font-bold lg:text-2xl flex item-center gap-0">
                     <span className=" font-poppins text-white">Seno</span>
                     <span className="font-poppins text-purple-500">Hoshi</span>
@@ -46,7 +50,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <a className="font-semibold text-white md:text-base lg:text-lg bg-purple-500 hover:bg-purple-400 px-4 py-2 rounded-full">Download CV</a>
-            </div>
+            </motion.div>
 
             <div className="flex md:hidden justify-between ">
 
@@ -75,7 +79,9 @@ const Navbar = () => {
                 </motion.div>
 
                     <motion.div
-                    initial={{opacity: 0, x: 100}}
+                    initial={{opacity: 0, x: 100, y: -100}}
+                    animate={{opacity: 1, x: 0, y: 0}}
+                    transition={{duration: 0.5}}
                     className="text-xl font-bold flex items-center py-6 px-4">
                         <span className=" text-white">Seno</span>
                         <span className=" text-purple-500">Hoshi</span>
